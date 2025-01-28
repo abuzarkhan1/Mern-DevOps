@@ -10,17 +10,15 @@ import forgotPasswordRouter from "./routes/forgotPassword.js"
 //app config
 dotenv.config()
 const app = express()
-const port = process.env.PORT || 8001
-mongoose.set('strictQuery', true);
+const port = process.env.PORT || 8000
+mongoose.set('strictQuery', false);
 
 //middlewares
 app.use(express.json())
 app.use(cors())
 
 //db config
-mongoose.connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-}, (err) => {
+mongoose.connect(process.env.MONGO_URI || "mongodb://localhost:27017/todo", (err) => {
     if (err) {
         console.log(err)
     } else {
