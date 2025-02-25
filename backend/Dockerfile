@@ -1,5 +1,4 @@
-#node     
-FROM balenalib/amd64-alpine-node:latest
+FROM node:18-alpine
 
 # Set the working directory
 WORKDIR /app
@@ -7,10 +6,10 @@ WORKDIR /app
 # Copy package.json and package-lock.json
 COPY package*.json ./
 
-# Install dependencies, including dev dependencies
+# Install dependencies
 RUN npm install
 
-# Install nodemon globally
+# Install nodemon globally 
 RUN npm install -g nodemon
 
 # Copy the rest of the application
