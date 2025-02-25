@@ -9,9 +9,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Checkout code from repository
-                checkout scm
-                echo 'Code checkout complete'
+                git "https://github.com/abuzarkhan1/Mern-DevOps.git"
             }
         }
         
