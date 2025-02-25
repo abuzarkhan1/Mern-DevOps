@@ -20,22 +20,3 @@ EXPOSE 8000
 
 # Command to start the application
 CMD ["npm", "run", "dev"]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                                                      [ Read 22 lines ]
-^G Help          ^O Write Out     ^W Where Is      ^K Cut           ^T Execute       ^C Location      M-U Undo         M-A Set Mark     M-] To Bracket
-^X Exit          ^R Read File     ^\ Replace       ^U Paste         ^J Justify       ^/ Go To Line    M-E Redo         M-6 Copy         ^Q Where Was
